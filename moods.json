@@ -1,0 +1,122 @@
+{
+  "moods": [
+    {
+      "id": "burnt-out",
+      "name": "Burnt Out",
+      "emoji": "😴",
+      "keywords": ["burnt out", "exhausted", "tired", "overwhelmed", "drained", "fatigued", "worn out", "spent"],
+      "support_message": "It sounds like you're running on empty. Remember, it's okay to take breaks and recharge. Try stepping away from your work for 10 minutes, or consider what you can delegate. Your well-being matters more than any task.",
+      "suggestions": [
+        "Take a 10-minute break",
+        "Delegate one task today",
+        "Practice deep breathing",
+        "Set boundaries with work"
+      ],
+      "category": "stress"
+    },
+    {
+      "id": "anxious",
+      "name": "Anxious",
+      "emoji": "😰",
+      "keywords": ["anxious", "worried", "nervous", "stress", "stressed", "uneasy", "concerned", "fearful"],
+      "support_message": "I hear that worry in your voice. Take a deep breath with me - inhale for 4 counts, hold for 4, exhale for 4. Remember, most of what we worry about never happens. What's one small thing you can do right now to feel more grounded?",
+      "suggestions": [
+        "4-4-4 breathing exercise",
+        "Write down your worries",
+        "Take a walk outside",
+        "Call a friend"
+      ],
+      "category": "stress"
+    },
+    {
+      "id": "sad",
+      "name": "Sad",
+      "emoji": "😔",
+      "keywords": ["sad", "depressed", "down", "blue", "melancholy", "gloomy", "unhappy", "miserable"],
+      "support_message": "I'm sorry you're feeling down. It's okay to not be okay sometimes. Maybe try doing something kind for yourself today - a warm drink, a favorite song, or reaching out to someone who cares about you. You don't have to go through this alone.",
+      "suggestions": [
+        "Make yourself a warm drink",
+        "Listen to your favorite music",
+        "Reach out to a friend",
+        "Do something you enjoy"
+      ],
+      "category": "emotion"
+    },
+    {
+      "id": "angry",
+      "name": "Angry",
+      "emoji": "😤",
+      "keywords": ["angry", "frustrated", "mad", "upset", "irritated", "annoyed", "furious", "livid"],
+      "support_message": "That frustration is totally valid. Sometimes we need to feel angry to process what's happening. Try taking a few deep breaths or stepping away for a moment. What's really behind this anger? Understanding that might help you feel more in control.",
+      "suggestions": [
+        "Take deep breaths",
+        "Step away for 5 minutes",
+        "Write down your feelings",
+        "Exercise to release tension"
+      ],
+      "category": "emotion"
+    },
+    {
+      "id": "happy",
+      "name": "Happy",
+      "emoji": "😊",
+      "keywords": ["happy", "joy", "excited", "great", "wonderful", "amazing", "fantastic", "elated"],
+      "support_message": "Your joy is contagious! It's wonderful to hear you feeling good. Savor this moment and maybe share that positive energy with someone else. Happiness shared is happiness multiplied.",
+      "suggestions": [
+        "Share your good mood with someone",
+        "Do something creative",
+        "Help someone else",
+        "Document this feeling"
+      ],
+      "category": "emotion"
+    },
+    {
+      "id": "hopeful",
+      "name": "Hopeful",
+      "emoji": "✨",
+      "keywords": ["hopeful", "optimistic", "positive", "encouraged", "inspired", "motivated", "confident"],
+      "support_message": "That hope in your voice is beautiful. Hold onto that optimism - it's a superpower. When you believe good things are possible, you're more likely to make them happen. Keep that positive energy flowing!",
+      "suggestions": [
+        "Set a small goal for today",
+        "Share your optimism with others",
+        "Write down your hopes",
+        "Take action on your dreams"
+      ],
+      "category": "emotion"
+    },
+    {
+      "id": "lonely",
+      "name": "Lonely",
+      "emoji": "🤗",
+      "keywords": ["lonely", "alone", "isolated", "solitary", "lonesome", "abandoned", "disconnected"],
+      "support_message": "I hear that loneliness, and I want you to know you're not alone in feeling alone. It's a human experience many of us share. Maybe try reaching out to someone today, even just a quick text. You'd be surprised how many people want to connect.",
+      "suggestions": [
+        "Send a text to a friend",
+        "Join an online community",
+        "Call a family member",
+        "Plan a social activity"
+      ],
+      "category": "social"
+    },
+    {
+      "id": "neutral",
+      "name": "Neutral",
+      "emoji": "🤔",
+      "keywords": ["okay", "fine", "alright", "normal", "stable", "calm", "content"],
+      "support_message": "I'm here to listen, whatever you're feeling. Sometimes just talking things out can help us understand ourselves better. Is there anything specific on your mind that you'd like to explore?",
+      "suggestions": [
+        "Reflect on your day",
+        "Try something new",
+        "Practice gratitude",
+        "Set an intention for tomorrow"
+      ],
+      "category": "neutral"
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "description": "Mood detection and support data for voice-based mood tracker",
+    "total_moods": 8,
+    "categories": ["stress", "emotion", "social", "neutral"]
+  }
+} 

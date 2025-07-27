@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How's My Day? - Demo Version</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        .sidebar-item:hover {
+            background-color: #f3f4f6;
+        }
+        .sidebar-item.active {
+            background-color: #e5e7eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Sidebar -->
+    <div class="fixed left-0 top-0 h-full w-64 bg-white border-r border-gray-200 shadow-sm">
+        <!-- Logo Section -->
+        <div class="p-6 border-b border-gray-200">
+            <div class="flex items-center">
+                <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                    <i class="fas fa-heart text-white text-sm"></i>
+                </div>
+                <h1 class="text-xl font-bold text-gray-800">How's My Day?</h1>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="p-4">
+            <div class="space-y-2">
+                <!-- Home -->
+                <a href="#" class="sidebar-item flex items-center px-3 py-2 rounded-lg text-gray-600 hover:text-gray-900 transition-colors">
+                    <i class="fas fa-home w-5 h-5 mr-3"></i>
+                    <span>Home</span>
+                </a>
+
+                <!-- Demo (Active) -->
+                <a href="#" class="sidebar-item active flex items-center px-3 py-2 rounded-lg text-gray-700 hover:text-gray-900 transition-colors">
+                    <i class="fas fa-flask w-5 h-5 mr-3"></i>
+                    <span class="font-medium">Demo Mode</span>
+                </a>
+
+                <!-- Mood History -->
+                <a href="#" class="sidebar-item flex items-center px-3 py-2 rounded-lg text-gray-600 hover:text-gray-900 transition-colors">
+                    <i class="fas fa-chart-line w-5 h-5 mr-3"></i>
+                    <span>Mood History</span>
+                </a>
+
+                <!-- Voice Settings -->
+                <a href="#" class="sidebar-item flex items-center px-3 py-2 rounded-lg text-gray-600 hover:text-gray-900 transition-colors">
+                    <i class="fas fa-microphone w-5 h-5 mr-3"></i>
+                    <span>Voice Settings</span>
+                </a>
+
+                <!-- Support Messages -->
+                <a href="#" class="sidebar-item flex items-center px-3 py-2 rounded-lg text-gray-600 hover:text-gray-900 transition-colors">
+                    <i class="fas fa-comments w-5 h-5 mr-3"></i>
+                    <span>Support Library</span>
+                </a>
+
+                <!-- Settings -->
+                <a href="#" class="sidebar-item flex items-center px-3 py-2 rounded-lg text-gray-600 hover:text-gray-900 transition-colors">
+                    <i class="fas fa-cog w-5 h-5 mr-3"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Bottom Section -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200">
+            <!-- User Profile -->
+            <div class="flex items-center mb-4">
+                <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-user text-white text-xs"></i>
+                </div>
+                <div>
+                    <p class="text-sm font-medium text-gray-800">Demo Workspace</p>
+                    <p class="text-xs text-gray-500">Test Mode</p>
+                </div>
+            </div>
+
+            <!-- Upgrade Button -->
+            <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
+                <i class="fas fa-bolt mr-2"></i>
+                Get Full Version
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="ml-64 p-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm text-gray-600 mb-1">Demo Workspace</p>
+                    <h2 class="text-3xl font-bold text-gray-800">Test Mood Detection</h2>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- Dark Mode Toggle -->
+                    <button class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-moon text-gray-600"></i>
+                    </button>
+                    <!-- Help Button -->
+                    <button class="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg hover:bg-purple-200 transition-colors flex items-center">
+                        <i class="fas fa-question-circle mr-2"></i>
+                        Need Help?
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Card -->
+        <div class="max-w-2xl">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
+                <!-- Demo Notice -->
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-info-circle text-yellow-600 mr-2"></i>
+                        <p class="text-yellow-800 text-sm">
+                            <strong>Demo Mode:</strong> This version uses browser speech recognition. 
+                            For better accuracy, get an AssemblyAI API key.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Test Input -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        Test Mood Detection:
+                    </label>
+                    <textarea 
+                        id="testInput" 
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        rows="3"
+                        placeholder="Type or paste text here to test mood detection..."></textarea>
+                    <button 
+                        id="testButton"
+                        class="mt-2 w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors">
+                        Analyze Mood
+                    </button>
+                </div>
+
+                <!-- Result Display -->
+                <div id="resultContainer" class="hidden">
+                    <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 border border-green-200">
+                        <div class="flex items-center mb-4">
+                            <span id="moodEmoji" class="text-5xl mr-4"></span>
+                            <div>
+                                <h3 id="detectedMood" class="text-xl font-semibold text-gray-800"></h3>
+                                <p class="text-sm text-gray-600">Detected mood</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <p id="supportMessage" class="text-gray-700 leading-relaxed text-lg"></p>
+                        </div>
+                        <button id="speakButton" class="mt-4 w-full bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors font-medium">
+                            <i class="fas fa-volume-up mr-2"></i>Read Aloud
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sample Phrases -->
+                <div class="mt-6">
+                    <h3 class="text-sm font-medium text-gray-700 mb-2">Try these sample phrases:</h3>
+                    <div class="space-y-2">
+                        <button class="sample-phrase text-left w-full p-2 text-sm bg-gray-50 rounded hover:bg-gray-100 transition-colors" data-text="I'm feeling really burnt out from work today">
+                            "I'm feeling really burnt out from work today"
+                        </button>
+                        <button class="sample-phrase text-left w-full p-2 text-sm bg-gray-50 rounded hover:bg-gray-100 transition-colors" data-text="I'm anxious about my upcoming presentation">
+                            "I'm anxious about my upcoming presentation"
+                        </button>
+                        <button class="sample-phrase text-left w-full p-2 text-sm bg-gray-50 rounded hover:bg-gray-100 transition-colors" data-text="I'm feeling really happy and excited about the weekend">
+                            "I'm feeling really happy and excited about the weekend"
+                        </button>
+                        <button class="sample-phrase text-left w-full p-2 text-sm bg-gray-50 rounded hover:bg-gray-100 transition-colors" data-text="I'm feeling lonely and isolated lately">
+                            "I'm feeling lonely and isolated lately"
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class MoodTrackerDemo {
+            constructor() {
+                this.speechSynthesis = window.speechSynthesis;
+                this.initializeElements();
+                this.bindEvents();
+            }
+
+            initializeElements() {
+                this.testInput = document.getElementById('testInput');
+                this.testButton = document.getElementById('testButton');
+                this.resultContainer = document.getElementById('resultContainer');
+                this.detectedMood = document.getElementById('detectedMood');
+                this.moodEmoji = document.getElementById('moodEmoji');
+                this.supportMessage = document.getElementById('supportMessage');
+                this.speakButton = document.getElementById('speakButton');
+            }
+
+            bindEvents() {
+                this.testButton.addEventListener('click', () => this.analyzeMood());
+                this.speakButton.addEventListener('click', () => this.speakResponse());
+                
+                // Sample phrase buttons
+                document.querySelectorAll('.sample-phrase').forEach(button => {
+                    button.addEventListener('click', () => {
+                        this.testInput.value = button.dataset.text;
+                        this.analyzeMood();
+                    });
+                });
+            }
+
+            analyzeMood() {
+                const text = this.testInput.value.trim();
+                if (!text) {
+                    alert('Please enter some text to analyze');
+                    return;
+                }
+
+                const mood = this.detectMood(text);
+                const supportData = this.getSupportMessage(mood);
+                this.displayResults(mood, supportData);
+            }
+
+            detectMood(text) {
+                const lowerText = text.toLowerCase();
+                
+                if (lowerText.includes('burnt out') || lowerText.includes('exhausted') || lowerText.includes('tired')) {
+                    return 'burnt out';
+                } else if (lowerText.includes('anxious') || lowerText.includes('worried') || lowerText.includes('nervous') || lowerText.includes('stress')) {
+                    return 'anxious';
+                } else if (lowerText.includes('sad') || lowerText.includes('depressed') || lowerText.includes('down') || lowerText.includes('blue')) {
+                    return 'sad';
+                } else if (lowerText.includes('angry') || lowerText.includes('frustrated') || lowerText.includes('mad') || lowerText.includes('upset')) {
+                    return 'angry';
+                } else if (lowerText.includes('happy') || lowerText.includes('joy') || lowerText.includes('excited') || lowerText.includes('great')) {
+                    return 'happy';
+                } else if (lowerText.includes('hopeful') || lowerText.includes('optimistic') || lowerText.includes('positive')) {
+                    return 'hopeful';
+                } else if (lowerText.includes('lonely') || lowerText.includes('alone') || lowerText.includes('isolated')) {
+                    return 'lonely';
+                } else {
+                    return 'neutral';
+                }
+            }
+
+            getSupportMessage(mood) {
+                const supportMessages = {
+                    'burnt out': {
+                        emoji: '😴',
+                        message: "It sounds like you're running on empty. Remember, it's okay to take breaks and recharge. Try stepping away from your work for 10 minutes, or consider what you can delegate. Your well-being matters more than any task."
+                    },
+                    'anxious': {
+                        emoji: '😰',
+                        message: "I hear that worry in your voice. Take a deep breath with me - inhale for 4 counts, hold for 4, exhale for 4. Remember, most of what we worry about never happens. What's one small thing you can do right now to feel more grounded?"
+                    },
+                    'sad': {
+                        emoji: '😔',
+                        message: "I'm sorry you're feeling down. It's okay to not be okay sometimes. Maybe try doing something kind for yourself today - a warm drink, a favorite song, or reaching out to someone who cares about you. You don't have to go through this alone."
+                    },
+                    'angry': {
+                        emoji: '😤',
+                        message: "That frustration is totally valid. Sometimes we need to feel angry to process what's happening. Try taking a few deep breaths or stepping away for a moment. What's really behind this anger? Understanding that might help you feel more in control."
+                    },
+                    'happy': {
+                        emoji: '😊',
+                        message: "Your joy is contagious! It's wonderful to hear you feeling good. Savor this moment and maybe share that positive energy with someone else. Happiness shared is happiness multiplied."
+                    },
+                    'hopeful': {
+                        emoji: '✨',
+                        message: "That hope in your voice is beautiful. Hold onto that optimism - it's a superpower. When you believe good things are possible, you're more likely to make them happen. Keep that positive energy flowing!"
+                    },
+                    'lonely': {
+                        emoji: '🤗',
+                        message: "I hear that loneliness, and I want you to know you're not alone in feeling alone. It's a human experience many of us share. Maybe try reaching out to someone today, even just a quick text. You'd be surprised how many people want to connect."
+                    },
+                    'neutral': {
+                        emoji: '🤔',
+                        message: "I'm here to listen, whatever you're feeling. Sometimes just talking things out can help us understand ourselves better. Is there anything specific on your mind that you'd like to explore?"
+                    }
+                };
+
+                return supportMessages[mood] || supportMessages['neutral'];
+            }
+
+            displayResults(mood, supportData) {
+                this.detectedMood.textContent = mood.charAt(0).toUpperCase() + mood.slice(1);
+                this.moodEmoji.textContent = supportData.emoji;
+                this.supportMessage.textContent = supportData.message;
+                this.resultContainer.classList.remove('hidden');
+            }
+
+            speakResponse() {
+                if (this.speechSynthesis && this.supportMessage.textContent) {
+                    this.speechSynthesis.cancel();
+                    
+                    const utterance = new SpeechSynthesisUtterance(this.supportMessage.textContent);
+                    utterance.rate = 0.9;
+                    utterance.pitch = 1;
+                    utterance.volume = 0.8;
+                    
+                    const voices = this.speechSynthesis.getVoices();
+                    const preferredVoice = voices.find(voice => 
+                        voice.name.includes('Samantha') || 
+                        voice.name.includes('Alex') || 
+                        voice.name.includes('Google')
+                    );
+                    if (preferredVoice) {
+                        utterance.voice = preferredVoice;
+                    }
+                    
+                    this.speechSynthesis.speak(utterance);
+                }
+            }
+        }
+
+        // Initialize the demo when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new MoodTrackerDemo();
+        });
+    </script>
+</body>
+</html> 

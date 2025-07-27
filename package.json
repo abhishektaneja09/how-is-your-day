@@ -1,0 +1,49 @@
+{
+  "name": "hows-my-day",
+  "version": "1.0.0",
+  "description": "AI-powered voice mood tracker with empathetic responses using GPT-4o-mini and OpenAI TTS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "serve": "npx serve .",
+    "test": "echo \"No tests specified\" && exit 0",
+    "setup": "npm install && echo 'Please configure your .env file with API keys'"
+  },
+  "keywords": [
+    "voice",
+    "ai",
+    "mood-tracker",
+    "mental-health",
+    "openai",
+    "gpt-4o-mini",
+    "assemblyai", 
+    "speech-to-text",
+    "text-to-speech",
+    "emotion-detection",
+    "empathy",
+    "wellbeing"
+  ],
+  "author": "How's My Day Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/hows-my-day.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/hows-my-day/issues"
+  },
+  "homepage": "https://github.com/yourusername/hows-my-day#readme"
+}
